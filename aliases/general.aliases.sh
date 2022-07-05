@@ -15,9 +15,9 @@
 #   1.  MAKE TERMINAL BETTER
 #   -----------------------------
 
-alias cp='cp -iv'                           # Preferred 'cp' implementation
-alias mv='mv -iv'                           # Preferred 'mv' implementation
-alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+alias cp='cp -i'                            # Preferred 'cp' implementation
+alias mv='mv -i'                            # Preferred 'mv' implementation
+alias mkdir='mkdir -p'                      # Preferred 'mkdir' implementation
 alias ll='ls -lAFh'                         # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias nano='nano -W'                        # Preferred 'nano' implementation

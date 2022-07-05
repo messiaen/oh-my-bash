@@ -41,9 +41,9 @@ function _omb_theme_PROMPT_COMMAND() {
     # This needs to be first to save last command return code
     local RC="$?"
 
-    local hostname="${_omb_prompt_bold_gray}\u@\h"
+    local hostname="${_omb_prompt_bold_green}\u@\h"
     local python_venv; _omb_prompt_get_python_venv
-    python_venv=$_omb_prompt_white$python_venv
+    python_venv=$_omb_prompt_yellow$python_venv
 
     # Set return status color
     if [[ ${RC} == 0 ]]; then
@@ -55,7 +55,7 @@ function _omb_theme_PROMPT_COMMAND() {
     # Append new history lines to history file
     history -a
 
-    PS1="$(clock_prompt)$python_venv${hostname} ${_omb_prompt_bold_teal}\W $(scm_prompt_char_info)${ret_status}→ ${_omb_prompt_normal}"
+    PS1="$python_venv${hostname} ${_omb_prompt_bold_teal}\W $(scm_prompt_char_info)${ret_status}→ ${_omb_prompt_normal}"
 }
 
 _omb_util_add_prompt_command _omb_theme_PROMPT_COMMAND
